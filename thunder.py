@@ -14,7 +14,8 @@ def usage():
 """
 Add line(s) to file based on key, template_file & keyval_data
 """
-def addline(args):
+def addline(vargs):
+    args = vargs[1:]
     if len(args) < 3:
         print("usage: " + usage())
         exit(1)
@@ -119,5 +120,4 @@ def make_new_content(template_file,keyval):
 
  
 if __name__ == '__main__':
-    print("DIRECT")
-
+    addline(sys.argv)
