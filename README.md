@@ -1,23 +1,27 @@
-# Thunder
-A simple Python tool to develop LIGHTNING fast! - Append code and build your code template library.
+# Thunder: A simple Python tool to develop LIGHTNING fast! - Append code and build your massive code template library.
 
+The idea is simple: coding is mostly appending and substracting lines of code. 
+
+The thunder.py tool empowers you to easily append lines of code to specific areas of your project.
 
 ## Install
 ```
 git clone REPO
 ```
 
-## Usage
+## Append code
+### Usage
 ```
 python thunder.py [key] [input_file] [template_file] (optional: [keyval_data])
 ```
 
-## How it works:
-1. Add "thunder tags" to areas of files you want append code to.
+#### How it works:
+
+1. Add "thunder tags" to specific areas of files you want append code to.
 2. Create (a) file(s) with the data you want to append often.
 3. Use thunder to add the data from those files to the marked areas.
 
-### (1) How to use tags:
+##### (1) How to use tags:
 Thunder uses tags, because it needs to know where exactly to append lines. You can use the tags for the following filetype:
 
 
@@ -42,22 +46,29 @@ LaTeX:
 ```
 
 
-### Example usage:
+##### Example usage:
 
-##### Add data to file after thunder tag
+###### Add data to file after thunder tag
 sword@kate-pc thunder$ python thunder.py test1 ../thunder-manual-demo/test.html ../thunder-manual-demo/data.txt 
 sword@kate-pc thunder$ cat ../thunder-manual-demo/test.html <!-- thunder:test1 -->
 HI THIS IS AWESOME DATA OF {{name}}
 
-##### Add data to file with variable after thunder tag
+###### Add data to file with variable after thunder tag
 sword@kate-pc thunder$ python thunder.py test1 ../thunder-manual-demo/test.html ../thunder-manual-demo/data.txt name=nick
 sword@kate-pc thunder$ cat ../thunder-manual-demo/test.html <!-- thunder:test1 -->
 HI THIS IS AWESOME DATA OF nick
 HI THIS IS AWESOME DATA OF {{name}}
 
-##### Add data to file with multiple variables after thunder tag
+###### Add data to file with multiple variables after thunder tag
 sword@kate-pc thunder$ python thunder.py test1 ../thunder-manual-demo/test.html ../thunder-manual-demo/data.txt name=nick
 sword@kate-pc thunder$ cat ../thunder-manual-demo/test.html <!-- thunder:test1 -->
 HI THIS IS AWESOME DATA OF nick
 HI THIS IS AWESOME DATA OF {{name}}
 
+
+## Build your massive code template library
+"" - quote compound interest
+
+A few ideas to get started:
+- use a designated folder to store all your valuable code snippets
+- use thunder.py in your own setup scripts
