@@ -9,10 +9,10 @@ if os.environ.get("THUNDER_TAG"):
     TAG = os.environ.get("THUNDER_TAG")
 
 def usage():
-        return "thunder.py [key] [input_file] [template_file] (optional: [keyval_data])"
+        return "thunder.py [thunder_tag] [input_file] [template_file] (optional: [keyval_data])"
 
 """
-Add line(s) to file based on key, template_file & keyval_data
+Add line(s) to file based on tag, template_file & keyval_data
 """
 def addline(vargs):
     args = vargs[1:]

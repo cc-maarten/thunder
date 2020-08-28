@@ -12,7 +12,7 @@ git clone https://github.com/learnermaarten/thunder
 ## Append code
 ### Usage
 ```
-python thunder.py [key] [input_file] [template_file] (optional: [keyval_data])
+python thunder.py [thunder_tag] [input_file] [template_file] (optional: [keyval_data])
 ```
 
 #### How it works:
