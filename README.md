@@ -21,9 +21,28 @@ python thunder.py [key] [input_file] [template_file] (optional: [keyval_data])
 2. Create (a) file(s) with the data you want to append often.
 3. Use thunder to add the data from those files to the marked areas.
 
-##### (1) How to use tags:
-Thunder uses tags, because it needs to know where exactly to append lines. You can use the tags for the following filetype:
+##### Example usage:
 
+###### Append lines to file from template
+```
+python thunder.py test1 demo/index.html demo-templates/madewithlove.html 
+# Added line: <p>Made with <3</p>
+```
+
+###### Append lines to file from template with variable
+```
+python thunder.py test1 demo/index.html demo-templates/madewithlovewithvar.html name=Nick
+# Added line: <p>Made with <3 by Nick</p>
+```
+
+###### Append lines to file from template with multiple variables
+```
+python thunder.py test1 demo/index.html demo-templates/madewithlovewithvars.html name=Nick&year=2020
+# Added line: <p>Made with <3 by Nick in 2020</p>
+```
+
+##### Thunder tags
+Thunder uses tags, because it needs to know where exactly you want to append lines. You can use the following tags for the following filetype:
 
 HTML:
 ```
@@ -45,30 +64,17 @@ LaTeX:
 % thunder:TAG
 ```
 
-
-##### Example usage:
-
-###### Add data to file after thunder tag
-sword@kate-pc thunder$ python thunder.py test1 ../thunder-manual-demo/test.html ../thunder-manual-demo/data.txt 
-sword@kate-pc thunder$ cat ../thunder-manual-demo/test.html <!-- thunder:test1 -->
-HI THIS IS AWESOME DATA OF {{name}}
-
-###### Add data to file with variable after thunder tag
-sword@kate-pc thunder$ python thunder.py test1 ../thunder-manual-demo/test.html ../thunder-manual-demo/data.txt name=nick
-sword@kate-pc thunder$ cat ../thunder-manual-demo/test.html <!-- thunder:test1 -->
-HI THIS IS AWESOME DATA OF nick
-HI THIS IS AWESOME DATA OF {{name}}
-
-###### Add data to file with multiple variables after thunder tag
-sword@kate-pc thunder$ python thunder.py test1 ../thunder-manual-demo/test.html ../thunder-manual-demo/data.txt name=nick
-sword@kate-pc thunder$ cat ../thunder-manual-demo/test.html <!-- thunder:test1 -->
-HI THIS IS AWESOME DATA OF nick
-HI THIS IS AWESOME DATA OF {{name}}
-
+##### Thunder variables
+If you want to append lines from your templates and use variables you can use curly brackets ({{name}}).
+Then when you execute thunder, use the third argument to set the value of a variable (var=value). If you want to use multiple variables use the & seperator (var1=value1&var2=value2), for example: 
+```
+python thunder.py test1 demo/index.html demo-templates/madewithlovewithvars.html name=Nick&year=2020
+```
 
 ## Build your massive code template library
 "" - quote compound interest
 
-A few ideas to get started:
+A few ideas to get started with your massive code template library:
 - use a designated folder to store all your valuable code snippets
+- make subfolders to organize your codebase
 - use thunder.py in your own setup scripts
