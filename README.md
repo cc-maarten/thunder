@@ -6,7 +6,7 @@ The thunder.py tool empowers you to easily append lines of code to specific area
 
 ## Install
 ```
-git clone REPO
+git clone https://github.com/learnermaarten/thunder
 ```
 
 ## Append code
