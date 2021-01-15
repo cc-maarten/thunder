@@ -72,7 +72,7 @@ python thunder.py test1 demo/index.html demo-templates/madewithlovewithvars.html
 ```
 
 ## Build your massive code template library
-"" - quote compound interest
+"Play iterated games. All the returns in life, whether in wealth, relationships, or knowledge, come from compound interest." - Naval Ravikant
 
 A few ideas to get started with your massive code template library:
 - use a designated folder to store all your valuable code snippets
